@@ -27,13 +27,26 @@ header h1 p {
   line-height: 0.5;
   color: #272044;
 }
-
-form {
+form-container {
+  margin-bottom: 30px;
   padding: 30px;
   background-color: #f2efeb;
   border-radius: 10px;
+}
+form {
   display: flex;
-  margin-bottom: 30px;
+}
+
+.hint {
+  margin: 12px 12px;
+  font-size: 12px;
+  line-height: 0.5;
+  color: #272044;
+  opacity: 0.5;
+}
+
+.hidden {
+  display: none;
 }
 
 .instructions {
@@ -60,12 +73,22 @@ form {
   background-color: #f1f5f6;
   padding: 20px;
   line-height: 24px;
-  border-right: 6px solid #dae5e8;
+  border-right: 4px solid #dae5e8;
+  margin-top: 30px;
 }
 
 footer {
+  margin-top: 120px;
   text-align: center;
   font-size: 12px;
   line-height: 0.5;
   color: #272044;
+}
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
