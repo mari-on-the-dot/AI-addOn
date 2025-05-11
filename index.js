@@ -10,3 +10,15 @@ let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${
 console.log("processing");
 axios.get(apiUrl).then(showResults);
 */
+
+function generatePoem(event) {
+  event.preventDefault();
+
+  new Typewriter("#poem", {
+    strings: "o silencio na rua",
+    autoStart: true,
+  });
+}
+
+let poemFormElement = document.querySelector("#poem-generator-form");
+poemFormElement.addEventListener("submit", generatePoem);
