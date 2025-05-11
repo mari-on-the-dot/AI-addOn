@@ -9,44 +9,49 @@
     <title>SheCodes Plus AI</title>
   </head>
   <body>
-    <header>
-      <h1>Poem Generator</h1>
-      <p>powered by AI</p>
-    </header>
-    <main>
-      <form>
-        <input
-          type
-          #="text"
-          placeholder="Enter the topic of the poem"
-          autofocus
-          required
-          autocomplete="off"
-        />
-        <input type="submit" />
-      </form>
-      <div>
-        No silêncio da cidade vazia,
-        <p>um eco dança na calçada fria.</p>
-        <p>Luzes piscam, sonhos somem,</p>
-        <p>na pressa que os dias consomem.</p>
-      </div>
-    </main>
+    <div class="container">
+      <header>
+        <h1>
+          Poem Generator
+          <p>powered by AI</p>
+        </h1>
+      </header>
 
-    <footer>
-      <hr />
-      This project was coded by
-      <a href="https://github.com/mari-on-the-dot" target="_blank"> mari</a>, is
-      open-coursed on
-      <a href="https://github.com/mari-on-the-dot/AI-addOn" target="_blank"
-        >GitHub</a
-      >
-      and hosted on
-      <a href="https://poemasartificiais.netlify.app/" target="_blank"
-        >Netlify</a
-      >
-    </footer>
+      <main>
+        <form>
+          <input
+            type
+            #="text"
+            placeholder="Enter the topic of the poem"
+            autofocus
+            required
+            autocomplete="off"
+            class="instructions"
+          />
+          <input type="submit" class="submit-button" />
+        </form>
+        <div class="poem">
+          <p>No silêncio da cidade vazia,</p>
+          <p>um eco dança na calçada fria.</p>
+          <p>Luzes piscam, sonhos somem,</p>
+          <p>na pressa que os dias consomem.</p>
+        </div>
+      </main>
 
+      <footer>
+        <hr />
+        This project was coded by
+        <a href="https://github.com/mari-on-the-dot" target="_blank"> mari</a>,
+        is open-coursed on
+        <a href="https://github.com/mari-on-the-dot/AI-addOn" target="_blank"
+          >GitHub</a
+        >
+        and hosted on
+        <a href="https://poemasartificiais.netlify.app/" target="_blank"
+          >Netlify</a
+        >
+      </footer>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
