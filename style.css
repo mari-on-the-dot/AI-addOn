@@ -5,6 +5,7 @@ body {
 a {
   color: #5a48ad;
 }
+
 .container {
   margin: 120px auto;
   max-width: 600px;
@@ -54,11 +55,12 @@ form {
   color: #5a48ad;
 }
 .poem {
+  text-align: right;
   font-size: 14px;
   background-color: #f1f5f6;
   padding: 20px;
   line-height: 24px;
-  border-left: 3px solid #dae5e8;
+  border-right: 6px solid #dae5e8;
 }
 
 footer {

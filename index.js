@@ -27,7 +27,7 @@ function generatePoem(event) {
   let apiKey = "2f76b36a73748t15dd07ebbo0f40f91a";
 
   let prompt =
-    "Your mission is to generate a 4 line poem, Each line should be on its own line using <br> tags. Make sure to follow the user instructions";
+    "Your mission is to generate a 4 line poem, Each line should be on its own line using <br> tags. Make sure to follow the user instructions. Add a signature at the end 'SheCodes AI' in a <strong> element";
   let context = `User instructions: Generate a short poem in portuguese about ${userText}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
