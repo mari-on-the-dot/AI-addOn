@@ -10,15 +10,15 @@ let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${
 console.log("processing");
 axios.get(apiUrl).then(showResults);
 */
-function displayPoem(response) {
-  new Typewriter("#poem", {
+function displayJoke(response) {
+  new Typewriter("#joke", {
     strings: response.data.answer,
     autoStart: true,
     cursor: "",
   });
 }
 
-function generatePoem(event) {
+function generateJoke(event) {
   event.preventDefault();
 
   let instructionsInput = document.querySelector("#user-instructions");
@@ -27,16 +27,16 @@ function generatePoem(event) {
   let apiKey = "2f76b36a73748t15dd07ebbo0f40f91a";
 
   let prompt =
-    "Your mission is to generate a 4 line poem, Each line should be on its own line using <br> tags. Make sure to follow the user instructions. Add a signature at the end 'SheCodes AI' in a <strong> element";
-  let context = `User instructions: Generate a short poem in portuguese about ${userText}`;
+    "Your mission is to generate a really funny, punch-line joke, Each line should be on its own line using <br> tags. Make sure to follow the user instructions. Add a signature at the end 'SheCodes AI' in a <strong> element";
+  let context = `User instructions: Generate a short punch-line joke about ${userText}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
-  let poemElement = document.querySelector("#poem");
-  poemElement.classList.remove("hidden");
-  poemElement.innerHTML = `<div class="generating">⏳ Generating a poem about ${userText} for you. Hold on</div>`;
+  let jokeElement = document.querySelector("#joke");
+  jokeElement.classList.remove("hidden");
+  jokeElement.innerHTML = `<div class="generating">⏳ Generating a joke about ${userText} for you. Hold on</div>`;
 
-  axios.get(apiUrl).then(displayPoem);
+  axios.get(apiUrl).then(displayJoke);
 }
 
-let poemFormElement = document.querySelector("#poem-generator-form");
-poemFormElement.addEventListener("submit", generatePoem);
+let jokeFormElement = document.querySelector("#joke-generator-form");
+jokeFormElement.addEventListener("submit", generateJoke);
